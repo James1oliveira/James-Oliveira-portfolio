@@ -1137,3 +1137,73 @@ footer {
 @media (max-width: 480px) {
   .contact-cards { grid-template-columns: 1fr; }
 }
+
+/* ── Demo logins on project cards ── */
+.demo-login {
+  position: relative;
+  z-index: 5;
+  margin-top: 1.25rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--navy-border);
+  background: rgba(11,17,32,0.55);
+  cursor: default;
+  max-width: 360px;
+}
+.demo-login-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.demo-login-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.2rem 0;
+}
+.demo-login-key {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate);
+  width: 3rem;
+  flex-shrink: 0;
+}
+.demo-login-row code {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--white);
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+.demo-copy {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate);
+  background: transparent;
+  border: 1px solid var(--navy-border);
+  padding: 0.2rem 0.55rem;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+  flex-shrink: 0;
+}
+.demo-copy:hover { color: var(--gold); border-color: var(--gold); }
+.demo-login-role {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--slate);
+  opacity: 0.7;
+  margin: 0.4rem 0 0.1rem;
+}
+.demo-login-role:first-of-type { margin-top: 0; }
