@@ -268,6 +268,11 @@
             <span class="project-link-divider">·</span>
             <a href="https://www.youtube.com/watch?v=_nC6hIKSYkM" target="_blank" rel="noopener noreferrer" class="project-link">▶ Watch Demo</a>
           </div>
+          <div class="demo-login">
+            <span class="demo-login-label">Demo login</span>
+            <div class="demo-login-row"><span class="demo-login-key">Email</span><code>JohnDee@gmail.com</code><button type="button" class="demo-copy" aria-label="Copy email">Copy</button></div>
+            <div class="demo-login-row"><span class="demo-login-key">Pass</span><code>John123$</code><button type="button" class="demo-copy" aria-label="Copy password">Copy</button></div>
+          </div>
           <span class="project-hint">Still loading? Give it up to a minute — free hosting wakes up on first visit</span>
         </div>
 
@@ -287,6 +292,18 @@
             <a href="https://github.com/James1oliveira/fleetfrontend" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
             <span class="project-link-divider">·</span>
             <a href="https://www.youtube.com/watch?v=J_Q2_ZP9sjQ" target="_blank" rel="noopener noreferrer" class="project-link">▶ Watch Demo</a>
+          </div>
+          <div class="demo-login">
+            <span class="demo-login-label">Demo logins</span>
+            <span class="demo-login-role">Admin</span>
+            <div class="demo-login-row"><span class="demo-login-key">Email</span><code>sarah@mark.com</code><button type="button" class="demo-copy" aria-label="Copy admin email">Copy</button></div>
+            <div class="demo-login-row"><span class="demo-login-key">Pass</span><code>Sarah1234$</code><button type="button" class="demo-copy" aria-label="Copy admin password">Copy</button></div>
+            <span class="demo-login-role">Dispatcher</span>
+            <div class="demo-login-row"><span class="demo-login-key">Email</span><code>bob@dude.com</code><button type="button" class="demo-copy" aria-label="Copy dispatcher email">Copy</button></div>
+            <div class="demo-login-row"><span class="demo-login-key">Pass</span><code>Bob123</code><button type="button" class="demo-copy" aria-label="Copy dispatcher password">Copy</button></div>
+            <span class="demo-login-role">Driver</span>
+            <div class="demo-login-row"><span class="demo-login-key">Email</span><code>dave@t.com</code><button type="button" class="demo-copy" aria-label="Copy driver email">Copy</button></div>
+            <div class="demo-login-row"><span class="demo-login-key">Pass</span><code>Dave123</code><button type="button" class="demo-copy" aria-label="Copy driver password">Copy</button></div>
           </div>
           <span class="project-hint">Still loading? Give it up to a minute — free hosting wakes up on first visit</span>
         </div>
@@ -328,10 +345,15 @@
             <span class="project-link-divider">·</span>
             <a href="https://www.youtube.com/watch?v=19uMpp8bWXs" target="_blank" rel="noopener noreferrer" class="project-link">▶ Watch Demo</a>
           </div>
+          <div class="demo-login">
+            <span class="demo-login-label">Demo login</span>
+            <div class="demo-login-row"><span class="demo-login-key">User</span><code>demo</code><button type="button" class="demo-copy" aria-label="Copy username">Copy</button></div>
+            <div class="demo-login-row"><span class="demo-login-key">Pass</span><code>Demo1234</code><button type="button" class="demo-copy" aria-label="Copy password">Copy</button></div>
+          </div>
           <span class="project-hint">Still loading? Give it up to a minute — free hosting wakes up on first visit</span>
         </div>
 
-        <div class="project-card reveal reveal-delay-2" data-href="https://service-manager-project-ipyy.onrender.com">
+        <div class="project-card reveal reveal-delay-2" data-href="https://service-manager-project.onrender.com">
           <span class="project-num">05</span>
           <div class="project-arrow">↗</div>
           <h3>Service Manager — Job Tracking System</h3>
@@ -342,11 +364,16 @@
             <span class="project-tag">PostgreSQL</span>
           </div>
           <div class="project-links" style="position:relative;z-index:5;">
-            <a href="https://service-manager-project-ipyy.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">↗ Live Demo</a>
+            <a href="https://service-manager-project.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">↗ Live Demo</a>
             <span class="project-link-divider">·</span>
             <a href="https://github.com/James1oliveira/Service_manager_Django_project" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
             <span class="project-link-divider">·</span>
             <a href="https://www.youtube.com/watch?v=TnXNgxxYqVY" target="_blank" rel="noopener noreferrer" class="project-link">▶ Watch Demo</a>
+          </div>
+          <div class="demo-login">
+            <span class="demo-login-label">Demo login</span>
+            <div class="demo-login-row"><span class="demo-login-key">User</span><code>James</code><button type="button" class="demo-copy" aria-label="Copy username">Copy</button></div>
+            <div class="demo-login-row"><span class="demo-login-key">Pass</span><code>james1234</code><button type="button" class="demo-copy" aria-label="Copy password">Copy</button></div>
           </div>
           <span class="project-hint">Still loading? Give it up to a minute — free hosting wakes up on first visit</span>
         </div>
@@ -525,15 +552,30 @@
       'https://fleetbackend-kudi.onrender.com',
       'https://expense-tracker-qkkk.onrender.com',
       'https://contacthub-vqsi.onrender.com',
-      'https://service-manager-project-ipyy.onrender.com'
+      'https://service-manager-project.onrender.com'
     ].forEach(url => fetch(url, { mode: 'no-cors', cache: 'no-store' }).catch(() => {}));
 
     // Make entire project cards clickable (opens the live demo),
     // while still letting the individual links/text selection work normally.
     document.querySelectorAll('.project-card[data-href]').forEach(card => {
       card.addEventListener('click', (e) => {
-        if (e.target.closest('a') || e.target.closest('.project-links')) return; // let real links behave normally
+        if (e.target.closest('a') || e.target.closest('.project-links') || e.target.closest('.demo-login')) return; // let real links behave normally
         window.open(card.dataset.href, '_blank', 'noopener,noreferrer');
+      });
+    });
+
+    // Copy buttons for the demo logins
+    document.querySelectorAll('.demo-copy').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const text = btn.previousElementSibling.textContent;
+        try { await navigator.clipboard.writeText(text); }
+        catch {
+          const t = document.createElement('textarea');
+          t.value = text; document.body.appendChild(t); t.select();
+          document.execCommand('copy'); t.remove();
+        }
+        btn.textContent = 'Copied';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
       });
     });
 
