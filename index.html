@@ -268,7 +268,7 @@
             <span class="project-link-divider">·</span>
             <a href="https://www.youtube.com/watch?v=_nC6hIKSYkM" target="_blank" rel="noopener noreferrer" class="project-link">▶ Watch Demo</a>
           </div>
-          <span class="project-hint">First load may take ~30s — free hosting spins down when idle</span>
+          <span class="project-hint">Still loading? Give it up to a minute — free hosting wakes up on first visit</span>
         </div>
 
         <div class="project-card reveal reveal-delay-1" data-href="https://fleetfrontend-9fus.onrender.com">
@@ -288,7 +288,7 @@
             <span class="project-link-divider">·</span>
             <a href="https://www.youtube.com/watch?v=J_Q2_ZP9sjQ" target="_blank" rel="noopener noreferrer" class="project-link">▶ Watch Demo</a>
           </div>
-          <span class="project-hint">First load may take ~30s — free hosting spins down when idle</span>
+          <span class="project-hint">Still loading? Give it up to a minute — free hosting wakes up on first visit</span>
         </div>
 
         <div class="project-card reveal reveal-delay-1" data-href="https://expense-tracker-qkkk.onrender.com">
@@ -308,7 +308,7 @@
             <span class="project-link-divider">·</span>
             <a href="https://www.youtube.com/watch?v=8-w9nI2KdbQ" target="_blank" rel="noopener noreferrer" class="project-link">▶ Watch Demo</a>
           </div>
-          <span class="project-hint">First load may take ~30s — free hosting spins down when idle</span>
+          <span class="project-hint">Still loading? Give it up to a minute — free hosting wakes up on first visit</span>
         </div>
 
         <div class="project-card reveal reveal-delay-2" data-href="https://contacthub-vqsi.onrender.com">
@@ -328,7 +328,7 @@
             <span class="project-link-divider">·</span>
             <a href="https://www.youtube.com/watch?v=19uMpp8bWXs" target="_blank" rel="noopener noreferrer" class="project-link">▶ Watch Demo</a>
           </div>
-          <span class="project-hint">First load may take ~30s — free hosting spins down when idle</span>
+          <span class="project-hint">Still loading? Give it up to a minute — free hosting wakes up on first visit</span>
         </div>
 
         <div class="project-card reveal reveal-delay-2" data-href="https://service-manager-django-project.onrender.com">
@@ -348,7 +348,7 @@
             <span class="project-link-divider">·</span>
             <a href="https://www.youtube.com/watch?v=TnXNgxxYqVY" target="_blank" rel="noopener noreferrer" class="project-link">▶ Watch Demo</a>
           </div>
-          <span class="project-hint">First load may take ~30s — free hosting spins down when idle</span>
+          <span class="project-hint">Still loading? Give it up to a minute — free hosting wakes up on first visit</span>
         </div>
 
       </div>
@@ -516,6 +516,17 @@
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
     });
+
+    // Wake up the free Render apps as soon as someone opens the portfolio,
+    // so they are already running by the time a visitor clicks a project.
+    [
+      'https://real-estate-hsno.onrender.com',
+      'https://fleetfrontend-9fus.onrender.com',
+      'https://fleetbackend-kudi.onrender.com',
+      'https://expense-tracker-qkkk.onrender.com',
+      'https://contacthub-vqsi.onrender.com',
+      'https://service-manager-django-project.onrender.com'
+    ].forEach(url => fetch(url, { mode: 'no-cors', cache: 'no-store' }).catch(() => {}));
 
     // Make entire project cards clickable (opens the live demo),
     // while still letting the individual links/text selection work normally.
