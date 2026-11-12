@@ -1207,3 +1207,19 @@ footer {
   margin: 0.4rem 0 0.1rem;
 }
 .demo-login-role:first-of-type { margin-top: 0; }
+
+/* ── Layout tweaks: no headshot / single credentials card / odd contact cards ── */
+.about-grid.no-photo { grid-template-columns: 1fr; max-width: 760px; }
+.credentials-grid.single { grid-template-columns: 1fr; max-width: 520px; }
+.contact-cards > .contact-card:last-of-type:nth-of-type(odd) { grid-column: 1 / -1; }
+
+/* Wide demo-login box on the featured card: one line per role */
+.demo-login.demo-login-wide { max-width: 640px; }
+.demo-login-groups { display: grid; gap: 0.35rem; }
+.demo-login-group { display: grid; grid-template-columns: 6.5rem 1fr 1fr; align-items: center; gap: 0 1rem; }
+.demo-login-group .demo-login-role { margin: 0; }
+.demo-login-group .demo-login-row { padding: 0; }
+@media (max-width: 768px) {
+  .demo-login-group { grid-template-columns: 1fr; padding: 0.3rem 0; }
+  .demo-login-group .demo-login-role { margin-top: 0.3rem; }
+}
