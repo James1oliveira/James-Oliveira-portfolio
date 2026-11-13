@@ -255,8 +255,47 @@
 
       <div class="projects-grid">
 
-        <div class="project-card featured reveal" data-href="https://fleetfrontend-9fus.onrender.com">
+        <div class="project-card featured full reveal" data-href="https://github.com/James1oliveira/autocare">
           <span class="project-num">01</span>
+          <div class="project-arrow">↗</div>
+          <div class="project-split">
+            <div>
+              <h3>AutoCare AI — Car Workshop Microservices</h3>
+              <p>A car workshop platform built as Spring Boot microservices. Customers describe a car problem and a Spring AI assistant explains the likely cause and quotes a price, using retrieval-augmented generation (RAG) over the workshop&#39;s own guide and live price list, so it doesn&#39;t make things up. Customers book and track their car, and mechanics run a job board. A Spring Cloud Gateway handles JWT checks, header-spoofing protection and rate limiting, and every push is tested by GitHub Actions.</p>
+              <div class="project-tags">
+                <span class="project-tag">Java 21</span>
+                <span class="project-tag">Spring Boot</span>
+                <span class="project-tag">Spring Cloud Gateway</span>
+                <span class="project-tag">Spring AI</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">React</span>
+                <span class="project-tag">Docker</span>
+                <span class="project-tag">GitHub Actions</span>
+              </div>
+              <div class="project-links" style="position:relative;z-index:5;">
+                <a href="https://github.com/James1oliveira/autocare" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                <span class="project-link-divider">·</span>
+                <a href="https://github.com/James1oliveira/autocare/blob/main/docs/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer" class="project-link">Architecture</a>
+                <span class="project-link-divider">·</span>
+                <a href="https://github.com/James1oliveira/autocare/actions" target="_blank" rel="noopener noreferrer" class="project-link">Tests</a>
+              </div>
+            </div>
+            <div class="arch" aria-label="How the services connect">
+              <div class="arch-node arch-edge">React frontend</div>
+              <div class="arch-line"></div>
+              <div class="arch-node arch-gateway">API gateway<small>JWT · rate limit · routing</small></div>
+              <div class="arch-line"></div>
+              <div class="arch-services">
+                <div class="arch-node">auth-service<small>BCrypt · JWT</small></div>
+                <div class="arch-node">booking-service<small>jobs · prices</small></div>
+                <div class="arch-node arch-ai">ai-service<small>Spring AI · RAG</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card featured reveal reveal-delay-1" data-href="https://fleetfrontend-9fus.onrender.com">
+          <span class="project-num">02</span>
           <div class="project-arrow">↗</div>
           <h3>Fleet Manager — Full-Stack Fleet System</h3>
           <p>Full-stack fleet management system for tracking vehicles, drivers, orders, maintenance and costs. Separate Admin, Dispatcher and Driver accounts with JWT login, a Node/Express REST API on MongoDB, and live updates over Socket.io.</p>
@@ -299,7 +338,7 @@
         </div>
 
         <div class="project-card reveal reveal-delay-1" data-href="https://real-estate-hsno.onrender.com">
-          <span class="project-num">02</span>
+          <span class="project-num">03</span>
           <div class="project-arrow">↗</div>
           <h3>Sahand Estate — Real Estate Platform</h3>
           <p>Full-stack real estate marketplace built with Next.js where users can browse, search and filter properties for sale or rent. Signed-in users can create, edit and delete their own listings with up to six photos, stored on Cloudinary.</p>
@@ -326,7 +365,7 @@
         </div>
 
         <div class="project-card reveal reveal-delay-1" data-href="https://expense-tracker-qkkk.onrender.com">
-          <span class="project-num">03</span>
+          <span class="project-num">04</span>
           <div class="project-arrow">↗</div>
           <h3>Expense Tracker — Finance App</h3>
           <p>React app for keeping track of monthly spending in Rands. Set your salary, then add, edit and delete categorised expenses and watch your remaining balance update instantly.</p>
@@ -346,7 +385,7 @@
         </div>
 
         <div class="project-card reveal reveal-delay-2" data-href="https://contacthub-vqsi.onrender.com">
-          <span class="project-num">04</span>
+          <span class="project-num">05</span>
           <div class="project-arrow">↗</div>
           <h3>ContactHub — Contact Management</h3>
           <p>Django contact manager with HTMX for a fast, no-reload experience. Add, search and delete contacts instantly, attach profile photos and documents through Cloudinary, and keep each user&#39;s contacts private behind a login.</p>
@@ -372,7 +411,7 @@
         </div>
 
         <div class="project-card reveal reveal-delay-2" data-href="https://service-manager-project.onrender.com">
-          <span class="project-num">05</span>
+          <span class="project-num">06</span>
           <div class="project-arrow">↗</div>
           <h3>Service Manager — Job Tracking System</h3>
           <p>Django app where customers log vehicle service requests with photos. Includes user registration and login, full create, view, edit and delete for services, Cloudinary image uploads and a permanent PostgreSQL database.</p>

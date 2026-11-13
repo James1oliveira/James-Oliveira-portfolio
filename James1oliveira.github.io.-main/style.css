@@ -1223,3 +1223,24 @@ footer {
   .demo-login-group { grid-template-columns: 1fr; padding: 0.3rem 0; }
   .demo-login-group .demo-login-role { margin-top: 0.3rem; }
 }
+
+/* ── AutoCare AI: full-width featured card with a small architecture diagram ── */
+.project-card.featured.full { grid-column: 1 / -1; }
+.project-split { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2.5rem; align-items: center; }
+.arch { display: flex; flex-direction: column; align-items: center; font-family: var(--font-mono); font-size: 0.72rem; color: var(--slate); }
+.arch-node {
+  border: 1px solid var(--navy-border); background: rgba(11,17,32,0.55);
+  padding: 0.55rem 0.8rem; text-align: center; color: var(--white); letter-spacing: 0.04em; min-width: 9rem;
+}
+.arch-node small { display: block; color: var(--slate); font-size: 0.62rem; margin-top: 0.15rem; letter-spacing: 0.06em; }
+.arch-gateway { border-color: var(--gold); }
+.arch-ai { border-color: var(--gold); }
+.arch-line { width: 1px; height: 1.1rem; background: var(--gold); opacity: 0.6; }
+.arch-services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; width: 100%; }
+.arch-services .arch-node { min-width: 0; padding: 0.55rem 0.4rem; font-size: 0.66rem; }
+@media (max-width: 1024px) {
+  .project-split { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
+}
+@media (max-width: 480px) {
+  .arch-services { grid-template-columns: minmax(0, 1fr); }
+}
